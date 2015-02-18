@@ -39,6 +39,14 @@ namespace Assets.Scripts.voxel
             DestroyChunk(pos.X, pos.Y, pos.Z);
         }
 
+        public int ChunksInMemory
+        {
+            get
+            {
+                return Chunks.Count;
+            }
+        }
+
         public void DestroyChunk(int x, int y, int z)
         {
             Chunk chunk;
