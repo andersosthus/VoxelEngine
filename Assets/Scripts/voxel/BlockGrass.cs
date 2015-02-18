@@ -6,7 +6,6 @@ namespace Assets.Scripts.voxel
     public class BlockGrass : Block
     {
         public BlockGrass()
-            : base()
         {
         }
 
