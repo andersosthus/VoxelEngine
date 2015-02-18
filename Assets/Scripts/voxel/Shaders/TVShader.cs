@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.voxel
+namespace Assets.Scripts.voxel.Shaders
 {
     [ExecuteInEditMode]
     [RequireComponent(typeof (Camera))]
