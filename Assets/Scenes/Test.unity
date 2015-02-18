@@ -303,7 +303,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1165779563}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efd7752f9327b3f4ba576724a2d7f00c, type: 3}
   m_Name: 
@@ -311,8 +311,25 @@ MonoBehaviour:
   ActiveShader: {fileID: 4800000, guid: cb7c33797f711e64594ede6cb67989f5, type: 3}
   VertsForce: .50999999
   VertsForce2: .254999995
+  ScanColor: .400000006
   Contrast: 2.0999999
   Brightness: 27
+--- !u!114 &1165779569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165779563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 335112e75db2f534f8d15507aa048d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BlurWidth: 1
+  ExtraBlurry: 0
+  Intensity: .699999988
+  Threshold: .75
+  Material: {fileID: 2100000, guid: 5209417774801496dbc4ad7f143115a1, type: 2}
 --- !u!1 &1227911076
 GameObject:
   m_PrefabParentObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
