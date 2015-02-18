@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Assets.Scripts.voxel.Helpers;
 using UnityEngine;
 
 namespace Assets.Scripts.voxel
@@ -101,9 +102,7 @@ namespace Assets.Scripts.voxel
                     var newX = x*Chunk.ChunkSize;
                     var newZ = z*Chunk.ChunkSize;
 
-                    var newChunkPos = playerPos;
-                    newChunkPos.X += newX;
-                    newChunkPos.Z += newZ;
+                    var newChunkPos = playerPos.CloneWithAdd(newX, 0, newZ);
 
                     if (PushChunkToBuildList(newChunkPos))
                         return;
