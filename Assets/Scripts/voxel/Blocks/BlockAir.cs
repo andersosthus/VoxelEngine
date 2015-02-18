@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.Scripts.voxel
+namespace Assets.Scripts.voxel.Blocks
 {
     [Serializable]
     public class BlockAir : Block

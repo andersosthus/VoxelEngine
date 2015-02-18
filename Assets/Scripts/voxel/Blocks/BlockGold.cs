@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts.voxel
+﻿using Assets.Scripts.voxel.Structs;
+
+namespace Assets.Scripts.voxel.Blocks
 {
     public class BlockGold : Block
     {

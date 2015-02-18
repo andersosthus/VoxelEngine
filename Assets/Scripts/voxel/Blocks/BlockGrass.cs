@@ -1,6 +1,7 @@
 ﻿using System;
+using Assets.Scripts.voxel.Structs;
 
-namespace Assets.Scripts.voxel
+namespace Assets.Scripts.voxel.Blocks
 {
     [Serializable]
     public class BlockGrass : Block

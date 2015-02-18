@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts.voxel.Helpers
+﻿using Assets.Scripts.voxel.Structs;
+
+namespace Assets.Scripts.voxel.Helpers
 {
     public static class WorldPosExtensions
     {

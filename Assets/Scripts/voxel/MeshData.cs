@@ -8,9 +8,10 @@ namespace Assets.Scripts.voxel
         public List<int> ColliderTriangles = new List<int>();
         public List<Vector3> ColliderVerticies = new List<Vector3>();
         public List<int> Triangles = new List<int>();
+        public bool UseRenderDataForCollision;
         public List<Vector2> Uv = new List<Vector2>();
         public List<Vector3> Verticies = new List<Vector3>();
-        public bool UseRenderDataForCollision;
+
         public MeshData()
         {
         }
@@ -39,7 +40,7 @@ namespace Assets.Scripts.voxel
         {
             Triangles.Add(triangle);
 
-            if(UseRenderDataForCollision)
+            if (UseRenderDataForCollision)
                 ColliderTriangles.Add(triangle - (Verticies.Count - ColliderVerticies.Count));
         }
 
@@ -47,7 +48,7 @@ namespace Assets.Scripts.voxel
         {
             Verticies.Add(vertex);
 
-            if(UseRenderDataForCollision)
+            if (UseRenderDataForCollision)
                 ColliderVerticies.Add(vertex);
         }
     }

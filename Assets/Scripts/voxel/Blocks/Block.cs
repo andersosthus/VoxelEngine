@@ -1,7 +1,8 @@
 ﻿using System;
+using Assets.Scripts.voxel.Structs;
 using UnityEngine;
 
-namespace Assets.Scripts.voxel
+namespace Assets.Scripts.voxel.Blocks
 {
     [Serializable]
     public class Block
@@ -149,12 +150,6 @@ namespace Assets.Scripts.voxel
             UVs[3] = new Vector2(TileSize*tilePos.X, TileSize*tilePos.Y);
 
             return UVs;
-        }
-
-        public struct Tile
-        {
-            public int X;
-            public int Y;
         }
     }
 }

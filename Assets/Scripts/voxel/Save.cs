@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.Scripts.voxel.Blocks;
+using Assets.Scripts.voxel.Structs;
 
 namespace Assets.Scripts.voxel
 {

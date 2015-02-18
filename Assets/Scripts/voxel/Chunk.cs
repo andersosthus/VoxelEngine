@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.voxel.Blocks;
+using Assets.Scripts.voxel.Structs;
+using UnityEngine;
 
 namespace Assets.Scripts.voxel
 {

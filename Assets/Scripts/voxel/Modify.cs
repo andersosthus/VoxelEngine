@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts.voxel.Blocks;
+using UnityEngine;
 
 namespace Assets.Scripts.voxel
 {
@@ -19,7 +20,10 @@ namespace Assets.Scripts.voxel
             {
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.forward, out hit, 10))
-                    Terrain.SetBlock(hit, new BlockGrass(), true);
+                {
+                    
+                }
+                    //Terrain.SetBlock(hit, new BlockGrass(), true);
             }
 
             if(Input.GetKey(KeyCode.Escape))
