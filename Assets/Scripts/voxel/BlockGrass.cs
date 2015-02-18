@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.voxel
 {
     [Serializable]
     public class BlockGrass : Block

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.voxel
 {
     public class World : MonoBehaviour
     {
@@ -11,6 +11,8 @@ namespace Assets.Scripts
 
         public void CreateChunk(int x, int y, int z)
         {
+            //Debug.Log(string.Format("World - CreateChunk: Pos - {0} {1} {2}", x, y, z));
+
             var worldPos = new WorldPos(x, y, z);
             var newChunkObject =
                 Instantiate(ChunkPreFab, new Vector3(x, y, z), Quaternion.Euler(Vector3.zero)) as GameObject;

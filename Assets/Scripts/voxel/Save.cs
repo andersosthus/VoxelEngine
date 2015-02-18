@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.voxel
 {
     [Serializable]
     public class Save

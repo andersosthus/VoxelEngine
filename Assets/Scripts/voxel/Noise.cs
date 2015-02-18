@@ -26,7 +26,7 @@
 
 //For more information, please refer to <http://unlicense.org/>
 
-namespace Assets.Scripts
+namespace Assets.Scripts.voxel
 {
     /// <summary>
     /// Implementation of the Perlin simplex noise, an improved Perlin noise algorithm.
