@@ -4,16 +4,16 @@ namespace Assets.Scripts.voxel
 {
     public class TerrainGen
     {
-        private float _dirtBaseHeight = 1;
-        private float _dirtNoise = 0.04f;
-        private float _dirtNoiseHeight = 3;
-        private float _stoneBaseHeight = -24;
-        private float _stoneBaseNoise = 0.05f;
-        private float _stoneBaseNoiseHeight = 4;
-        private float _stoneMinHeight = -12;
-        private float _stoneMountainFrequency = 0.008f;
-        private float _stoneMountainHeight = 48;
-
+        private const float DirtBaseHeight = 1;
+        private const float DirtNoise = 0.04f;
+        private const float DirtNoiseHeight = 3;
+        private const float StoneBaseHeight = -24;
+        private const float StoneBaseNoise = 0.05f;
+        private const float StoneBaseNoiseHeight = 4;
+        private const float StoneMinHeight = -12;
+        private const float StoneMountainFrequency = 0.008f;
+        private const float StoneMountainHeight = 48;
+        
         public Chunk ChunkGen(Chunk chunk)
         {
             for (var x = chunk.WorldPos.X; x < chunk.WorldPos.X + Chunk.ChunkSize; x++)
@@ -27,24 +27,24 @@ namespace Assets.Scripts.voxel
             return chunk;
         }
 
-        private Chunk ChunkColumnGen(Chunk chunk, int x, int z)
+        private static Chunk ChunkColumnGen(Chunk chunk, int x, int z)
         {
-            var stoneHeight = Mathf.FloorToInt(_stoneBaseHeight);
-            stoneHeight += GetNoise(x, 0, z, _stoneMountainFrequency, Mathf.FloorToInt(_stoneMountainHeight));
+            var stoneHeight = Mathf.FloorToInt(StoneBaseHeight);
+            stoneHeight += GetNoise(x, 0, z, StoneMountainFrequency, Mathf.FloorToInt(StoneMountainHeight));
 
-            if (stoneHeight < _stoneMinHeight)
-                stoneHeight = Mathf.FloorToInt(_stoneMinHeight);
+            if (stoneHeight < StoneMinHeight)
+                stoneHeight = Mathf.FloorToInt(StoneMinHeight);
 
-            stoneHeight += GetNoise(x, 0, z, _stoneBaseNoise, Mathf.FloorToInt(_stoneBaseNoiseHeight));
+            stoneHeight += GetNoise(x, 0, z, StoneBaseNoise, Mathf.FloorToInt(StoneBaseNoiseHeight));
 
-            var dirtHeight = stoneHeight + Mathf.FloorToInt(_dirtBaseHeight);
-            dirtHeight += GetNoise(x, 100, z, _dirtNoise, Mathf.FloorToInt(_dirtNoiseHeight));
+            var dirtHeight = stoneHeight + Mathf.FloorToInt(DirtBaseHeight);
+            dirtHeight += GetNoise(x, 100, z, DirtNoise, Mathf.FloorToInt(DirtNoiseHeight));
 
             for (var y = chunk.WorldPos.Y; y < chunk.WorldPos.Y + Chunk.ChunkSize; y++)
             {
-                if(y <= stoneHeight)
+                if (y <= stoneHeight)
                     chunk.SetBlock(x - chunk.WorldPos.X, y - chunk.WorldPos.Y, z - chunk.WorldPos.Z, new Block());
-                else if( y <= dirtHeight)
+                else if (y <= dirtHeight)
                     chunk.SetBlock(x - chunk.WorldPos.X, y - chunk.WorldPos.Y, z - chunk.WorldPos.Z, new BlockGrass());
                 else
                     chunk.SetBlock(x - chunk.WorldPos.X, y - chunk.WorldPos.Y, z - chunk.WorldPos.Z, new BlockAir());
